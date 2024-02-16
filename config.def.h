@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,			NULL,		1 << 8,			0,			 -1 },
 	{ NULL,		  "pulsemixer",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "vifm",		NULL,		SPTAG(1),		1,			 -1 },
+	{ "scpad",	 NULL,		NULL,		~0,		1,			 -1 },
 };
 
 /* layout(s) */
@@ -120,6 +121,7 @@ static const Key keys[] = {
 	{ MODKEY,            			XK_a,  	   togglescratch,  {.ui = 0 } },
 	{ MODKEY,            			XK_f,	   togglescratch,  {.ui = 1 } },
 	{ MODKEY,            			XK_u,	   spawn,          SHCMD( "~/.local/bin/dmenu-scripts/dmenu-utils") },
+	{ MODKEY,            			XK_s,	   spawn,          SHCMD( "~/.local/bin/scpad") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
